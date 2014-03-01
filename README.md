@@ -9,6 +9,9 @@ Estilos generados por [Less](http://lesscss.org/)
 
 Para los Placeholder de las imagenes se utiliza el sitio [placeholdit](http://placehold.it/)
 
+uso de [Bower](http://bower.io/) como Package Manager
+
+==================================
 
 Fondos Con Gradientes e Imagenes (Multiple Imagenes en Background)
 
