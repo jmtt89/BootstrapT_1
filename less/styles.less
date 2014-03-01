@@ -1,0 +1,697 @@
+@import "variables.less";
+@import "elements.less";
+@import "mixins.less";
+@import "bootstrap/variables.less";
+
+//Cosas que dependan del tamano de la pantalla
+
+// screens < 480px
+@media (max-width: @screen-phone){ // Mas Pequeno que Smarthphone (celulares viejos)
+  section{
+    min-height: 400px;
+    height: auto;
+  };
+
+  .bgWhiteImg{
+    background-color: white;
+  }
+
+  .bgGradient{
+    #gradient.horizontal(@blue-gradient,#FFF,50%,125%);
+  }
+
+  //Index
+    #index{
+      .Info{
+        margin-top: 20px;
+        .row{
+          h1{
+            font-size: 40px;
+          };
+          h3{
+            font-size: 20px;
+          };
+        };
+        #row2{
+          margin-left: 60px;
+          padding-bottom: 10px;
+        };
+      };
+    };
+
+  //Support
+    #support{
+      .Intro{
+        #gradient.horizontal(@blue-gradient,#FFF,50%,125%);
+        height: 80px;
+        h1{
+          margin-top: 10px;
+          margin-bottom: 0px;
+          font-size: 30px;
+        };
+        h2{
+          margin-top: 0px;
+          font-size: 20px;
+        };
+      };
+      .Options{
+        height: auto;
+      };
+    };
+
+  //Company
+    #company{
+      #support();
+      .Intro{
+        height: 100px;
+      };
+    }
+
+  //problem
+    #problem{
+      .page1{
+        .slogan{
+          strong{
+            padding-left: 0px !important;
+          };
+        };
+      };
+      .page2{
+        .solution{
+          text-align: center;
+           & > *{
+            display: block;
+           };
+        };
+        .solutionMenu{
+          overflow-x: hidden !important;
+          strong{
+            font-size: small !important;
+          }
+        };
+      };
+    };
+
+  //Footer
+    #slogan{
+      font-size: smaller;
+    };
+};
+
+// screens < 768px
+@media (max-width: @screen-tablet){ // Mas Pequeno que Tablet
+
+  #navLinks{
+    background-color: @nav-bg-color;
+  };
+  #UserLogin{
+    .center-block();
+  };
+  #subMenu{
+    height: auto !important;
+  };
+};
+
+// screens > 480px
+@media (min-width: @screen-phone){ // Mas Grande Que Smarthphones
+
+  section{
+    min-height: 430px;
+    height: auto;
+  };
+
+  .bgGradient1{
+    @start-color:@blue-gradient;
+    @start-percent:50%;
+    @end-color: transparent;
+    @end-percent: 80%;
+    @image1: "http://placehold.it/400x200";
+    // Safari 5.1-6, Chrome 10+
+    background-image:-webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)),
+                     url(@image1);
+    // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-image:linear-gradient(to right, @start-color @start-percent, @end-color @end-percent),
+                     url(@image1);
+    background-repeat:repeat-x, 
+                      no-repeat;
+    background-position:top 0   left 0,
+                        right 0 bottom 0;
+    background-size: auto, 
+                     auto 100%;
+
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+  };
+
+  .bgImg{
+    @image1: "http://placehold.it/800x100";
+    background: @blue-gradient url(@image1);
+    background-repeat:no-repeat;
+    background-position: left 0 bottom 0;
+    background-size: 100% auto;
+  };
+
+  .bgImg2{
+    @image1: "http://placehold.it/400x400";
+    background: url(@image1);
+    background-repeat: no-repeat;
+    background-position: top 70px left 0;
+    background-size: auto auto;
+  };
+
+  //Index
+    .bgGradient2{
+      @start-color:@blue-gradient;
+      @start-percent:50%;
+      @end-color: transparent;
+      @end-percent: 80%;
+      @image1: "http://placehold.it/500x500";
+      @image2: "http://placehold.it/0x0";
+      // Safari 5.1-6, Chrome 10+
+      background-image:url(@image2),
+                       -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)),
+                       url(@image1);
+      // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+      background-image:url(@image2),
+                       linear-gradient(to right, @start-color @start-percent, @end-color @end-percent),
+                       url(@image1);
+      background-repeat: no-repeat,
+                         repeat-x, 
+                         no-repeat;
+      background-position: top 70px   left 0,
+                           top 0   left 0,
+                           right 0 bottom 0;
+      background-size: auto,
+                       auto, 
+                       auto 100%;
+      background-attachment: fixed;
+
+      filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+    };
+
+    #index{
+      .Info{
+        .InfoC{
+          margin-top: 70px;
+        };
+        .row{
+          h1{
+            font-size: 60px;
+          };
+          h3{
+            font-size: 35px;
+          };
+        };
+        #row1{
+          margin-left: 10px;
+        };
+        #row2{
+          margin-left: 50px;
+          padding-bottom: 30px;
+        };
+      };
+    };
+
+  #generalsc{
+    .Intro{
+      height:200px;
+      h1{
+        margin-top: 50px;
+        margin-bottom: 0px;
+        font-size: 55px;
+      };
+      h2{
+        margin-top: 0px;
+      }
+    };
+    .Options{
+      height: 100px;
+    };
+  };
+
+  //Support
+    #support {
+      #generalsc();
+      .Intro{
+        .bgGradient1();
+      };
+    };
+
+  //Company
+    #company{
+      #generalsc();
+      .Intro{
+        .bgImg();
+      };
+    };
+
+  //login
+    .bgWhiteImg2{
+      @image1: "http://placehold.it/0x0";
+      background: white url(@image1);
+      background-repeat: no-repeat;
+      background-position: top 70px left 0;
+      background-size: auto auto;
+    };
+
+  //problem
+    .bgImage{
+        @start-color:  white;
+        @start-percent:60%;
+        @end-color:    transparent;
+        @end-percent:  100%;
+        @image1: "http://placehold.it/200x500";
+        @image2: "http://placehold.it/0x0";
+        @image3: "http://placehold.it/0x0";
+        background-image:url(@image3),
+                         url(@image2),
+                         -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)),
+                         url(@image1);
+        background-image:url(@image3),
+                         url(@image2),
+                         linear-gradient(to right, @start-color @start-percent, @end-color @end-percent),
+                         url(@image1);
+        background-repeat: no-repeat,
+                           no-repeat,
+                           repeat-x,
+                           no-repeat;
+        background-position: top 70px left 0,
+                             top 70px left 0,
+                             top 0    left 0,
+                             right 0  bottom 0;
+        background-size: auto,
+                         auto,
+                         auto,
+                         auto 100%;
+        background-attachment: fixed;
+    };
+
+    .bgWhiteImg{
+      background-color: white;
+      .bgImage();
+    };
+
+
+  //Footer
+    #slogan{
+        font-size: small;
+    };
+};
+
+// screens > 768px
+@media (min-width: @screen-tablet){ //Mas Grandes que Tables
+
+
+  //Index
+    .Info{
+      #row2{
+        margin-left: -50px;
+      };
+    };
+
+  //footer
+    #slogan{
+        font-size: small;
+    };
+};
+
+// screens > 992px
+@media (min-width:@screen-desktop){ //Mas grande que Desktop
+
+  //footer
+    #slogan{
+      font-size: small;
+    };
+};
+
+
+
+//Todos Los Tamanos
+
+.bgWhite{
+  background-color: white;
+}
+
+.bgGray{
+  background-color: @gray-lighter;
+}
+
+html{
+  height: 100%;
+  min-height: 600px;
+};
+
+body{
+  height: auto;
+  min-height: 100%;
+  padding-top:    @navSize;
+  padding-bottom: @footSize;
+};
+
+
+.container-fluid{
+  height: auto !important;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+};
+
+#navBar{
+
+  .navbar-header .navbar-brand{
+    color: white !important;
+  };
+
+  #gradient.vertical(#FFF,@nav-bg-color,-80%,100%);  
+  padding-top: 20px;
+  height: @navSize;
+  li{
+    a{
+      color: #FFF !important;
+    };
+  }
+  .active a{
+    background-color: #FFF;
+    color: @nav-bg-color !important;
+    margin-top: -1px;
+  }
+  
+  #navLinks{
+    margin-left: 25%;
+  }
+  
+  #UserLogin{
+    color:@nav-bg-color;
+  }
+};
+
+
+//Index
+.Info{
+  color: #FFF;
+  .row {
+    & > * {
+      display: inline;
+      position: relative;
+    };
+    h1{
+
+    }
+    h3{
+      top: -15px;
+    };
+  };
+
+  #row3{
+    margin-bottom: 15px;
+    p{
+      margin-bottom: 0px;
+    }
+  };
+  #row4{
+    margin-top: 15px;
+    p{
+      margin-bottom: 0px;
+    }
+    text-align: center;
+  }
+  .next{
+    text-align: center;
+  };
+  strong{
+    font-size: large;
+  }
+};
+
+//Support
+#support{
+  height: 100%;
+  .Intro{
+    color: white;
+  };
+  
+  .Options{
+    background-color: white;
+    div{
+      color: @gray-light;
+      font-size: small;
+      padding-top: 20px;
+      text-align: center;
+      a{
+        color: @gray-light;
+        &:hover{
+          text-decoration: none;
+          font-weight: bold;
+        };
+      };
+      li{
+        margin-bottom: 5px;
+      };
+      span{
+        padding-right: 3px;
+      }
+    };    
+  };
+  
+  #subMenu{
+    display: block;
+    a{
+      white-space: normal !important;
+    };
+  };
+
+  .Banner{
+    .brand{
+      text-align: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      div{
+        & > *{
+          display: inline-block;
+        };
+      };
+      .name{
+        color:@blue-gradient;
+        padding-top: 28px;
+        margin: 0px;
+      };
+    };
+  };
+
+}
+
+//Company
+#company{
+  #support();
+  .Info {
+    padding-bottom: 20px;
+    .brand{
+      height: auto;
+      h2{
+        color: @blue-gradient;
+      };
+      p{
+        color: @gray-light;
+        text-align:justify;
+      };
+    };
+  };
+}
+
+//Problem
+#problem{
+
+  section > div{
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
+  .page1,.page2{
+    h2,h3,h4{
+      color: @blue-gradient;
+    };
+    h1{
+      color: @footer-bg-color;
+    }
+    .intro{
+      white-space: normal;
+      background-color:  darken(@brand-primary, 8%);
+    }
+    .slogan{
+      padding-top: 15px;
+      p{
+        margin: 0px;
+      }
+      strong{
+        color: @blue-gradient;
+        font-size: large;
+        padding-left: 35%;
+      };
+    };
+    .offer{
+      .header{
+        margin-bottom: 5px;
+      };
+      li{
+        span{
+          color: @footer-bg-color;
+        };
+      };
+    };
+  };
+
+  .page2{
+    .solution{
+      text-align: center;
+    };
+    .solutionMenu{
+      margin-top: 15px;
+      overflow: auto;
+      text-align: center;
+      img{
+        .center-block();
+      }
+    };
+    .next{
+      padding-top: 15px;
+      text-align: center;
+    };
+  };
+
+  .brand{
+    #support.Banner.brand();
+  };
+  .offer,.solution{
+    h1,h2,h3,h4,h5{
+      display:  inline;
+    };
+  };
+};
+
+
+//Login
+#login{
+  #contenido{
+    padding-top: 30px;
+    #Cleft{
+      padding-top: 20px;
+    };
+    #Cright{
+      h3{
+        color: @blue-gradient;
+      };
+    };
+    #tile1{
+      background-color: @blue-gradient;
+      text-align: center;
+      color: white;
+      font-size: large;
+    };
+    #tile2{
+      background-color: @footer-bg-color;
+      font-size: x-small;
+      color: white;
+      padding: 10px;
+      strong{
+        display: inline-block;
+        font-size: small;
+      };
+      p{
+        margin-bottom: 5px;
+        margin-left: 20px;
+      };
+    };
+  };
+};
+
+//footer
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  
+  #footContent{
+    position: absolute;
+    bottom: 0;
+    width: inherit;
+    height: inherit;
+    color: #FFF;
+    background-color: @footer-bg-color;
+      
+    #footMenu{
+      margin-top: -30px;
+      div{
+        background-color: fade(@gray-light, 50%) !important;
+        height: 110px;
+        z-index: -2;
+        dt{
+          padding-top: 5px;
+          padding-bottom: 10px;
+        };
+        dd{
+          font-size: xx-small;
+          li{
+            display: block;
+            a{
+              color:white;
+              &:hover{
+                text-decoration: none;
+                font-weight: bold;
+              }
+            }
+          };
+          .fa{
+            margin-bottom: 2px;
+            color: @footer-bg-color;
+            font-size: large;
+            a{
+              display: inline-block;
+              color:white;
+              font-size: xx-small;
+              padding-left: 10px;
+            }
+          };
+          .active{
+            a{
+              color:@footer-bg-color;
+              font-weight: bold;
+            };
+          };
+        };
+      };
+      
+      &:hover{
+        .transition(all .4s ease-in-out);
+        margin-top: -100px;
+      };
+    };
+    
+    #footStick{
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 70px;
+      #colum1{
+      }
+      #colum2{
+      };
+      #colum3{
+      };
+      #colum4{
+      };
+      img{
+        .center-block();
+        margin-top: 10px;
+        margin-bottom: 10px;
+        height: 50px;
+      };
+    };
+  };
+
+  &:hover{
+    & > #footContent #footMenu{
+      .transition(all .4s ease-in-out);
+      margin-top: -100px;
+    }
+  };
+};
+
