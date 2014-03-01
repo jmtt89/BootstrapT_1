@@ -1,4 +1,10 @@
-BootstrapT_1
+Bootstrap Template 
 ============
 
-Tema basado en Bootstrap con StickyNavBar y StickyFooter ademas Responsive, adaptable a múltiples tamaños de pantalla, y Css Generado por Less
+Tema Responsive basado en Bootstrap con Sticky NavBar y Sticky Footer.
+
+Adaptable a múltiples tamaños de pantalla.
+
+Estilos generados por Less
+
+
