@@ -1,6 +1,9 @@
 Bootstrap Template 
 ============
 
+Demo del Template [AQUI](http://bootstraptemplates.net16.net/Template1/index.html)
+
+======================
 Tema Responsive basado en [Bootstrap](http://getbootstrap.com/) con Sticky NavBar y Sticky Footer.
 
 Adaptable a múltiples tamaños de pantalla.
