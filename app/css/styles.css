@@ -1,0 +1,665 @@
+/*
+// Azul y Naranja
+@blue-gradient: #4DB1E9;
+
+@navSize: 70px;
+@footSize : 70px;
+
+@nav-bg-color: #FF9430;
+@footer-bg-color: #FF9430;
+*/
+/*---------------------------------------------------
+    LESS Elements 0.9
+  ---------------------------------------------------
+    A set of useful LESS mixins
+    More info at: http://lesselements.com
+  ---------------------------------------------------*/
+@media (max-width: 480px) {
+  section {
+    min-height: 400px;
+    height: auto;
+  }
+  .bgWhiteImg {
+    background-color: white;
+  }
+  .bgGradient {
+    background-image: -webkit-linear-gradient(left, color-stop(#333333 50%), color-stop(#ffffff 125%));
+    background-image: linear-gradient(to right, #333333 50%, #ffffff 125%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ffffffff', GradientType=1);
+  }
+  #index .Info {
+    margin-top: 20px;
+  }
+  #index .Info .row h1 {
+    font-size: 40px;
+  }
+  #index .Info .row h3 {
+    font-size: 20px;
+  }
+  #index .Info #row2 {
+    margin-left: 60px;
+    padding-bottom: 10px;
+  }
+  #support .Intro {
+    background-image: -webkit-linear-gradient(left, color-stop(#333333 50%), color-stop(#ffffff 125%));
+    background-image: linear-gradient(to right, #333333 50%, #ffffff 125%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ffffffff', GradientType=1);
+    height: 80px;
+  }
+  #support .Intro h1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 30px;
+  }
+  #support .Intro h2 {
+    margin-top: 0px;
+    font-size: 20px;
+  }
+  #support .Options {
+    height: auto;
+  }
+  #company .Intro {
+    background-image: -webkit-linear-gradient(left, color-stop(#333333 50%), color-stop(#ffffff 125%));
+    background-image: linear-gradient(to right, #333333 50%, #ffffff 125%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#ffffffff', GradientType=1);
+    height: 80px;
+  }
+  #company .Intro h1 {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 30px;
+  }
+  #company .Intro h2 {
+    margin-top: 0px;
+    font-size: 20px;
+  }
+  #company .Options {
+    height: auto;
+  }
+  #company .Intro {
+    height: 100px;
+  }
+  #problem .page1 .slogan strong {
+    padding-left: 0px !important;
+  }
+  #problem .page2 .solution {
+    text-align: center;
+  }
+  #problem .page2 .solution > * {
+    display: block;
+  }
+  #problem .page2 .solutionMenu {
+    overflow-x: hidden !important;
+  }
+  #problem .page2 .solutionMenu strong {
+    font-size: small !important;
+  }
+  #slogan {
+    font-size: smaller;
+  }
+}
+@media (max-width: 768px) {
+  #navLinks {
+    background-color: #000000;
+  }
+  #UserLogin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  #subMenu {
+    height: auto !important;
+  }
+}
+@media (min-width: 480px) {
+  section {
+    min-height: 430px;
+    height: auto;
+  }
+  .bgGradient1 {
+    background-image: -webkit-linear-gradient(left, color-stop(#333333 50%), color-stop(transparent 80%)), url("http://placehold.it/400x200");
+    background-image: linear-gradient(to right, #333333 50%, transparent 80%), url("http://placehold.it/400x200");
+    background-repeat: repeat-x, no-repeat;
+    background-position: top 0   left 0,
+                        right 0 bottom 0;
+    background-size: auto, 
+                     auto 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#00000000', GradientType=1);
+  }
+  .bgImg {
+    background: #333333 url("http://placehold.it/800x100");
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 0;
+    background-size: 100% auto;
+  }
+  .bgImg2 {
+    background: url("http://placehold.it/400x400");
+    background-repeat: no-repeat;
+    background-position: top 70px left 0;
+    background-size: auto auto;
+  }
+  .bgGradient2 {
+    background-image: url("http://placehold.it/0x0"), -webkit-linear-gradient(left, color-stop(#333333 50%), color-stop(transparent 80%)), url("http://placehold.it/500x500");
+    background-image: url("http://placehold.it/0x0"), linear-gradient(to right, #333333 50%, transparent 80%), url("http://placehold.it/500x500");
+    background-repeat: no-repeat, repeat-x, no-repeat;
+    background-position: top 70px   left 0,
+                           top 0   left 0,
+                           right 0 bottom 0;
+    background-size: auto,
+                       auto, 
+                       auto 100%;
+    background-attachment: fixed;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#00000000', GradientType=1);
+  }
+  #index .Info .InfoC {
+    margin-top: 70px;
+  }
+  #index .Info .row h1 {
+    font-size: 60px;
+  }
+  #index .Info .row h3 {
+    font-size: 35px;
+  }
+  #index .Info #row1 {
+    margin-left: 10px;
+  }
+  #index .Info #row2 {
+    margin-left: 50px;
+    padding-bottom: 30px;
+  }
+  #generalsc .Intro {
+    height: 200px;
+  }
+  #generalsc .Intro h1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 55px;
+  }
+  #generalsc .Intro h2 {
+    margin-top: 0px;
+  }
+  #generalsc .Options {
+    height: 100px;
+  }
+  #support .Intro {
+    height: 200px;
+  }
+  #support .Intro h1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 55px;
+  }
+  #support .Intro h2 {
+    margin-top: 0px;
+  }
+  #support .Options {
+    height: 100px;
+  }
+  #support .Intro {
+    background-image: -webkit-linear-gradient(left, color-stop(#333333 50%), color-stop(transparent 80%)), url("http://placehold.it/400x200");
+    background-image: linear-gradient(to right, #333333 50%, transparent 80%), url("http://placehold.it/400x200");
+    background-repeat: repeat-x, no-repeat;
+    background-position: top 0   left 0,
+                        right 0 bottom 0;
+    background-size: auto, 
+                     auto 100%;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff333333', endColorstr='#00000000', GradientType=1);
+  }
+  #company .Intro {
+    height: 200px;
+  }
+  #company .Intro h1 {
+    margin-top: 50px;
+    margin-bottom: 0px;
+    font-size: 55px;
+  }
+  #company .Intro h2 {
+    margin-top: 0px;
+  }
+  #company .Options {
+    height: 100px;
+  }
+  #company .Intro {
+    background: #333333 url("http://placehold.it/800x100");
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 0;
+    background-size: 100% auto;
+  }
+  .bgWhiteImg2 {
+    background: #ffffff url("http://placehold.it/0x0");
+    background-repeat: no-repeat;
+    background-position: top 70px left 0;
+    background-size: auto auto;
+  }
+  .bgImage {
+    background-image: url("http://placehold.it/0x0"), url("http://placehold.it/0x0"), -webkit-linear-gradient(left, color-stop(#ffffff 60%), color-stop(transparent 100%)), url("http://placehold.it/200x500");
+    background-image: url("http://placehold.it/0x0"), url("http://placehold.it/0x0"), linear-gradient(to right, #ffffff 60%, transparent 100%), url("http://placehold.it/200x500");
+    background-repeat: no-repeat, no-repeat, repeat-x, no-repeat;
+    background-position: top 70px left 0,
+                             top 70px left 0,
+                             top 0    left 0,
+                             right 0  bottom 0;
+    background-size: auto,
+                         auto,
+                         auto,
+                         auto 100%;
+    background-attachment: fixed;
+  }
+  .bgWhiteImg {
+    background-color: white;
+    background-image: url("http://placehold.it/0x0"), url("http://placehold.it/0x0"), -webkit-linear-gradient(left, color-stop(#ffffff 60%), color-stop(transparent 100%)), url("http://placehold.it/200x500");
+    background-image: url("http://placehold.it/0x0"), url("http://placehold.it/0x0"), linear-gradient(to right, #ffffff 60%, transparent 100%), url("http://placehold.it/200x500");
+    background-repeat: no-repeat, no-repeat, repeat-x, no-repeat;
+    background-position: top 70px left 0,
+                             top 70px left 0,
+                             top 0    left 0,
+                             right 0  bottom 0;
+    background-size: auto,
+                         auto,
+                         auto,
+                         auto 100%;
+    background-attachment: fixed;
+  }
+  #slogan {
+    font-size: small;
+  }
+}
+@media (min-width: 768px) {
+  .Info #row2 {
+    margin-left: -50px;
+  }
+  #slogan {
+    font-size: small;
+  }
+}
+@media (min-width: 992px) {
+  #slogan {
+    font-size: small;
+  }
+}
+.bgWhite {
+  background-color: white;
+}
+.bgGray {
+  background-color: #eeeeee;
+}
+html {
+  height: 100%;
+  min-height: 600px;
+}
+body {
+  height: auto;
+  min-height: 100%;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.container-fluid {
+  height: auto !important;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+}
+#navBar {
+  background-image: -webkit-linear-gradient(top, #ffffff -80%, #000000 100%);
+  background-image: linear-gradient(to bottom, #ffffff -80%, #000000 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ff000000', GradientType=0);
+  padding-top: 20px;
+  height: 70px;
+}
+#navBar .navbar-header .navbar-brand {
+  color: white !important;
+}
+#navBar li a {
+  color: #FFF !important;
+}
+#navBar .active a {
+  background-color: #FFF;
+  color: #000000 !important;
+  margin-top: -1px;
+}
+#navBar #navLinks {
+  margin-left: 25%;
+}
+#navBar #UserLogin {
+  color: #000000;
+}
+.Info {
+  color: #FFF;
+}
+.Info .row > * {
+  display: inline;
+  position: relative;
+}
+.Info .row h3 {
+  top: -15px;
+}
+.Info #row3 {
+  margin-bottom: 15px;
+}
+.Info #row3 p {
+  margin-bottom: 0px;
+}
+.Info #row4 {
+  margin-top: 15px;
+  text-align: center;
+}
+.Info #row4 p {
+  margin-bottom: 0px;
+}
+.Info .next {
+  text-align: center;
+}
+.Info strong {
+  font-size: large;
+}
+#support {
+  height: 100%;
+}
+#support .Intro {
+  color: white;
+}
+#support .Options {
+  background-color: white;
+}
+#support .Options div {
+  color: #999999;
+  font-size: small;
+  padding-top: 20px;
+  text-align: center;
+}
+#support .Options div a {
+  color: #999999;
+}
+#support .Options div a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+#support .Options div li {
+  margin-bottom: 5px;
+}
+#support .Options div span {
+  padding-right: 3px;
+}
+#support #subMenu {
+  display: block;
+}
+#support #subMenu a {
+  white-space: normal !important;
+}
+#support .Banner .brand {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#support .Banner .brand div > * {
+  display: inline-block;
+}
+#support .Banner .brand .name {
+  color: #333333;
+  padding-top: 28px;
+  margin: 0px;
+}
+#company {
+  height: 100%;
+}
+#company .Intro {
+  color: white;
+}
+#company .Options {
+  background-color: white;
+}
+#company .Options div {
+  color: #999999;
+  font-size: small;
+  padding-top: 20px;
+  text-align: center;
+}
+#company .Options div a {
+  color: #999999;
+}
+#company .Options div a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+#company .Options div li {
+  margin-bottom: 5px;
+}
+#company .Options div span {
+  padding-right: 3px;
+}
+#company #subMenu {
+  display: block;
+}
+#company #subMenu a {
+  white-space: normal !important;
+}
+#company .Banner .brand {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#company .Banner .brand div > * {
+  display: inline-block;
+}
+#company .Banner .brand .name {
+  color: #333333;
+  padding-top: 28px;
+  margin: 0px;
+}
+#company .Info {
+  padding-bottom: 20px;
+}
+#company .Info .brand {
+  height: auto;
+}
+#company .Info .brand h2 {
+  color: #333333;
+}
+#company .Info .brand p {
+  color: #999999;
+  text-align: justify;
+}
+#problem section > div {
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+#problem .page1 h2,
+#problem .page2 h2,
+#problem .page1 h3,
+#problem .page2 h3,
+#problem .page1 h4,
+#problem .page2 h4 {
+  color: #333333;
+}
+#problem .page1 h1,
+#problem .page2 h1 {
+  color: #555555;
+}
+#problem .page1 .intro,
+#problem .page2 .intro {
+  white-space: normal;
+  background-color: #3276b1;
+}
+#problem .page1 .slogan,
+#problem .page2 .slogan {
+  padding-top: 15px;
+}
+#problem .page1 .slogan p,
+#problem .page2 .slogan p {
+  margin: 0px;
+}
+#problem .page1 .slogan strong,
+#problem .page2 .slogan strong {
+  color: #333333;
+  font-size: large;
+  padding-left: 35%;
+}
+#problem .page1 .offer .header,
+#problem .page2 .offer .header {
+  margin-bottom: 5px;
+}
+#problem .page1 .offer li span,
+#problem .page2 .offer li span {
+  color: #555555;
+}
+#problem .page2 .solution {
+  text-align: center;
+}
+#problem .page2 .solutionMenu {
+  margin-top: 15px;
+  overflow: auto;
+  text-align: center;
+}
+#problem .page2 .solutionMenu img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+#problem .page2 .next {
+  padding-top: 15px;
+  text-align: center;
+}
+#problem .brand {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+#problem .brand div > * {
+  display: inline-block;
+}
+#problem .brand .name {
+  color: #333333;
+  padding-top: 28px;
+  margin: 0px;
+}
+#problem .offer h1,
+#problem .solution h1,
+#problem .offer h2,
+#problem .solution h2,
+#problem .offer h3,
+#problem .solution h3,
+#problem .offer h4,
+#problem .solution h4,
+#problem .offer h5,
+#problem .solution h5 {
+  display: inline;
+}
+#login #contenido {
+  padding-top: 30px;
+}
+#login #contenido #Cleft {
+  padding-top: 20px;
+}
+#login #contenido #Cright h3 {
+  color: #333333;
+}
+#login #contenido #tile1 {
+  background-color: #333333;
+  text-align: center;
+  color: white;
+  font-size: large;
+}
+#login #contenido #tile2 {
+  background-color: #555555;
+  font-size: x-small;
+  color: white;
+  padding: 10px;
+}
+#login #contenido #tile2 strong {
+  display: inline-block;
+  font-size: small;
+}
+#login #contenido #tile2 p {
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+}
+footer #footContent {
+  position: absolute;
+  bottom: 0;
+  width: inherit;
+  height: inherit;
+  color: #FFF;
+  background-color: #555555;
+}
+footer #footContent #footMenu {
+  margin-top: -30px;
+}
+footer #footContent #footMenu div {
+  background-color: rgba(153, 153, 153, 0.5) !important;
+  height: 110px;
+  z-index: -2;
+}
+footer #footContent #footMenu div dt {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+footer #footContent #footMenu div dd {
+  font-size: xx-small;
+}
+footer #footContent #footMenu div dd li {
+  display: block;
+}
+footer #footContent #footMenu div dd li a {
+  color: white;
+}
+footer #footContent #footMenu div dd li a:hover {
+  text-decoration: none;
+  font-weight: bold;
+}
+footer #footContent #footMenu div dd .fa {
+  margin-bottom: 2px;
+  color: #555555;
+  font-size: large;
+}
+footer #footContent #footMenu div dd .fa a {
+  display: inline-block;
+  color: white;
+  font-size: xx-small;
+  padding-left: 10px;
+}
+footer #footContent #footMenu div dd .active a {
+  color: #555555;
+  font-weight: bold;
+}
+footer #footContent #footMenu:hover {
+  -webkit-transition: all all 0.4s ease-in-out ease-out;
+  -moz-transition: all all 0.4s ease-in-out ease-out;
+  -o-transition: all all 0.4s ease-in-out ease-out;
+  transition: all all 0.4s ease-in-out ease-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-top: -100px;
+}
+footer #footContent #footStick {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+}
+footer #footContent #footStick img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 50px;
+}
+footer:hover > #footContent #footMenu {
+  -webkit-transition: all all 0.4s ease-in-out ease-out;
+  -moz-transition: all all 0.4s ease-in-out ease-out;
+  -o-transition: all all 0.4s ease-in-out ease-out;
+  transition: all all 0.4s ease-in-out ease-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  margin-top: -100px;
+}
